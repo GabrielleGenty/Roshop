@@ -1,0 +1,247 @@
+:root {
+
+    --primary-color: #f4f4f4;
+    --secondary-color: #ff7f00;
+    --danger-color: #ff0000;
+    --dark-color: #333;
+    --light-color: #fff;
+}
+
+
+
+/********GLOBAL*****/
+
+*,
+*::after,
+*::befor {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.container {
+    background-color: lightgrey;
+
+}
+
+
+body {
+    font-size: 1.6rem;
+    font-family: "Ariel", sans-serif;
+    line-height: 1.6;
+    color: #555;
+    background-color: var(--primary-color);
+    color: var(--dark-color);
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+hr {
+    width: 35%;
+    margin: auto;
+    border-color: var(--danger-color);
+}
+
+h1 {
+    font-size: 4rem;
+    line-height: normal;
+}
+
+h2,
+h3 {
+    text-align: center;
+}
+
+h1 img {
+    width: 120px;
+    height: 30px;
+}
+
+h3 {
+    font-size: 2.8rem;
+}
+
+i {
+    color: var(--secondary-color);
+    font-size: 2.6rem;
+}
+
+a {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: var(--dark-color);
+
+}
+
+/* je te conseillerai d'aérer ici en */
+
+section+section {
+    margin-top: 2em;
+}
+
+/********HEADER******
+**********************/
+
+/*********NAV***********/
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--light-color);
+}
+
+nav {
+    display: flex;
+    gap: 1.5rem;
+    text-transform: uppercase;
+    margin-right: 0.5rem;
+
+}
+
+.nav-a {
+    padding: 0.5rem;
+
+}
+
+
+form,
+input {
+    width: 100%;
+}
+
+input {
+    height: 40px;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-left: none;
+    border-right: none;
+    font-size: 2rem;
+    text-align: center;
+}
+
+input::placholder {
+    color: #8e8e8e;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.active::after {
+    content: "";
+    position: absolute;
+    top: 28px;
+    left: .5rem;
+    width: calc(100% - .5rem * 2);
+    height: 2px;
+    background-color: var(--secondary-color);
+}
+
+header a:hover::after:not(h1 a) {
+    content: "";
+    position: absolute;
+    top: 28px;
+    left: .5rem;
+    width: calc(100% - .5rem * 2);
+    height: 2px;
+    background-color: var(--secondary-color);
+}
+
+/*******SECTION******/
+
+.wrapper div {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+}
+
+.wrapper h2 {
+    width: 100%;
+}
+
+.card {
+    position: relative;
+    flex-shrink: 0;
+    background-color: var(--light-color);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 150px;
+    margin: 1rem auto;
+}
+
+.card h3 {
+    margin: 1rem;
+    color: var(--dark-color);
+}
+
+.card img {
+    width: 100%;
+    max-height: 150px;
+    display: block;
+    object-fit: cover;
+
+}
+
+.card figcaption {
+    padding: .7rem;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+.card figcaption:not(.promo-alert) {
+    color: var(--danger-color);
+}
+
+.card .promo-alert {
+    display: inline-block;
+    color: var(--primary-color);
+    background-color: var(--danger-color);
+    padding: .8rem;
+    border-radius: .5rem;
+    width: 50px;
+}
+
+
+
+/************FOOTER**********/
+
+footer {
+    padding: 2rem 0 1rem;
+    color: var(--primary-color);
+    background-color: var(--dark-color);
+    text-align: center;
+}
+
+
+aside {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+footer nav {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    justify-content: center;
+    margin: 1rem;
+}
+
+footer nav a {
+    color: var(--primary-color);
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+footer p {
+    margin: 2rem 0 0;
+}
